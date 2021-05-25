@@ -29,13 +29,13 @@ while x==0 :#rotina para o codigo atualizar a cada 15 segundos
 
     horaAgora = datetime.now()#pega o horario atual
     horario = horaAgora.strftime('%H:%M')
-    if(horario == "18:44"):#verifica se o horario atual é 12:00
+    if(horario == "18:48"):#verifica se o horario atual é 12:00
         api.update_status("Faltam " + primeiraFaseDias + " dias para a primeira fase e " + segundaFaseDias + " dias para a segunda fase do Vestibular da Unicamp") #Tweeta
         print("Faltam " + primeiraFaseDias + " dias para a primeira fase e " + segundaFaseDias + " dias para a segunda fase do Vestibular da Unicamp")
         print("Deu certo")
     else:
         print("Não deu a hora ainda...")
     print("Bot running...")
-    j+=1
-    api.update_status("Hello world..."+j)
+    j=j+1
+    api.update_status(j)
     time.sleep(15)#define o intervalo entre cada ciclo
