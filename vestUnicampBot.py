@@ -3,7 +3,9 @@ from datetime import datetime, date
 import os
 from os import environ
 import time
-while True:#rotina para o codigo atualizar a cada 15 segundos
+
+x = 0
+while x==0 :#rotina para o codigo atualizar a cada 15 segundos
     #tokens de acesso à conta do twitter
     API_KEY = environ['API_KEY']
     API_SECRET_KEY = environ['API_SECRET_KEY']
@@ -26,7 +28,7 @@ while True:#rotina para o codigo atualizar a cada 15 segundos
 
     horaAgora = datetime.now()#pega o horario atual
     horario = horaAgora.strftime('%H:%M')
-    if(horario == "18:35"):#verifica se o horario atual é 12:00
+    if(horario == "18:42"):#verifica se o horario atual é 12:00
         api.update_status("Faltam " + primeiraFaseDias + " dias para a primeira fase e " + segundaFaseDias + " dias para a segunda fase do Vestibular da Unicamp") #Tweeta
         print("Faltam " + primeiraFaseDias + " dias para a primeira fase e " + segundaFaseDias + " dias para a segunda fase do Vestibular da Unicamp")
         print("Deu certo")
