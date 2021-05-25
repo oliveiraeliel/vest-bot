@@ -5,6 +5,7 @@ from os import environ
 import time
 
 x = 0
+j=0
 while x==0 :#rotina para o codigo atualizar a cada 15 segundos
     #tokens de acesso à conta do twitter
     API_KEY = environ['API_KEY']
@@ -35,5 +36,6 @@ while x==0 :#rotina para o codigo atualizar a cada 15 segundos
     else:
         print("Não deu a hora ainda...")
     print("Bot running...")
-    api.update_status("Hello world...")
+    j+=1
+    api.update_status("Hello world..."+j)
     time.sleep(15)#define o intervalo entre cada ciclo
