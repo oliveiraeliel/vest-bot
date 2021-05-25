@@ -33,3 +33,4 @@ else:
     print("Não deu a hora ainda...")
     
 print("Bot running...")
+api.update_status("Hello world...")
