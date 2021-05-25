@@ -26,7 +26,7 @@ while True:#rotina para o codigo atualizar a cada 15 segundos
 
     horaAgora = datetime.now()#pega o horario atual
     horario = horaAgora.strftime('%H:%M')
-    if(horario == "18:18"):#verifica se o horario atual é 12:00
+    if(horario == "18:25"):#verifica se o horario atual é 12:00
         api.update_status("Faltam " + primeiraFaseDias + " dias para a primeira fase e " + segundaFaseDias + " dias para a segunda fase do Vestibular da Unicamp") #Tweeta
         print("Faltam " + primeiraFaseDias + " dias para a primeira fase e " + segundaFaseDias + " dias para a segunda fase do Vestibular da Unicamp")
         print("Deu certo")
