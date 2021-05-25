@@ -38,5 +38,5 @@ while x==0 :#rotina para o codigo atualizar a cada 15 segundos
         print("Não deu a hora ainda...")
     print("Bot running...")
     j=j+1
-    api.update_status(j)
+    #api.update_status(j)
     time.sleep(15)#define o intervalo entre cada ciclo
