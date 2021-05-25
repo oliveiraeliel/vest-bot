@@ -4,9 +4,7 @@ import os
 from os import environ
 import time
 
-x = 0
-j=0
-while x==0 :#rotina para o codigo atualizar a cada 15 segundos
+while True :#rotina para o codigo atualizar a cada 15 segundos
     #tokens de acesso à conta do twitter
     API_KEY = environ['API_KEY']
     API_SECRET_KEY = environ['API_SECRET_KEY']
@@ -30,13 +28,12 @@ while x==0 :#rotina para o codigo atualizar a cada 15 segundos
     horaAgora = datetime.now()#pega o horario atual
     horario = horaAgora.strftime('%H:%M')
     print(horario)
-    if(horario == "21:57"):#verifica se o horario atual é 12:00
+    # verifica se o horario atual é 12:00. Como o fuso horario do servidor é 3h adiantado, coloquei 15:00 pro bot twittar ao meio dia
+    if(horario == "15:00"):
         api.update_status("Faltam " + primeiraFaseDias + " dias para a primeira fase e " + segundaFaseDias + " dias para a segunda fase do Vestibular da Unicamp") #Tweeta
         print("Faltam " + primeiraFaseDias + " dias para a primeira fase e " + segundaFaseDias + " dias para a segunda fase do Vestibular da Unicamp")
         print("Deu certo")
     else:
         print("Não deu a hora ainda...")
     print("Bot running...")
-    j=j+1
-    #api.update_status(j)
     time.sleep(15)#define o intervalo entre cada ciclo
