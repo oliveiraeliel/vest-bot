@@ -12,8 +12,6 @@ ACCESS_SECRET_TOKEN = environ['ACCESS_SECRET_TOKEN']
 auth = tweepy.OAuthHandler(API_KEY, API_SECRET_KEY)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET_TOKEN)
 api = tweepy.API(auth)
-if(api):
-    print("Api running...")
 
 primeiraFase = date(2021, 11, 21) #Dia da primeira fase
 agora = date.today() #Dia de hoje
@@ -27,7 +25,7 @@ segundaFaseDias = segundaFaseDiasHoras[0:3] #para tirar o horario e me dar somen
 
 horaAgora = datetime.now()#pega o horario atual
 horario = horaAgora.strftime('%H:%M')
-if(horario == "16:45"):#verifica se o horario atual é 12:00
+if(horario == "17:10"):#verifica se o horario atual é 12:00
     api.update_status("Faltam " + primeiraFaseDias + " dias para a primeira fase e " + segundaFaseDias + " dias para a segunda fase do Vestibular da Unicamp") #Tweeta
     print("Faltam " + primeiraFaseDias + " dias para a primeira fase e " + segundaFaseDias + " dias para a segunda fase do Vestibular da Unicamp")
     print("Deu certo")
