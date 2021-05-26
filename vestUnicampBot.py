@@ -18,11 +18,11 @@ while True :#rotina para o codigo atualizar a cada 15 segundos
     primeiraFase = date(2021, 11, 21) #Dia da primeira fase
     agora = date.today() #Dia de hoje
 
-    primeiraFaseDiasHoras = str(primeiraFase - agora) # Diferença entre os dias colocados anteriormente (Tempo para as ferias)
+    primeiraFaseDiasHoras = str(primeiraFase - agora) # Diferença entre os dias colocados anteriormente
     primeiraFaseDias = primeiraFaseDiasHoras[0:3] #para tirar o horario e me dar somente os dias
 
-    segundaFase = date(2022, 1, 16) #Colocar o dia das férias
-    segundaFaseDiasHoras = str(segundaFase - agora) # Diferença entre os dias colocados anteriormente (Tempo para as ferias)
+    segundaFase = date(2022, 1, 16) #Dia da segunda fase
+    segundaFaseDiasHoras = str(segundaFase - agora) # Diferença entre os dias colocados anteriormente
     segundaFaseDias = segundaFaseDiasHoras[0:3] #para tirar o horario e me dar somente os dias
 
     horaAgora = datetime.now()#pega o horario atual
