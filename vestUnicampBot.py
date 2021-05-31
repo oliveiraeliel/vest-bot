@@ -4,7 +4,7 @@ import os
 from os import environ
 import time
 
-while True :#rotina para o codigo atualizar a cada 15 segundos
+while True:#rotina para o codigo atualizar a cada 15 segundos
     #tokens de acesso à conta do twitter
     API_KEY = environ['API_KEY']
     API_SECRET_KEY = environ['API_SECRET_KEY']
