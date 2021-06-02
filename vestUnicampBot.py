@@ -21,7 +21,7 @@ while True:#rotina para o codigo atualizar a cada 15 segundos
     enemDiasHoras = str(enem - agora) # Diferença entre os dias colocados anteriormente
     enemDias = enemDiasHoras[0:3] #para tirar o horario e me dar somente os dias
 
-    primeiraFase = date(2021, 11, 07) #Dia da primeira fase
+    primeiraFase = date(2021, 11, 7) #Dia da primeira fase
 
     primeiraFaseDiasHoras = str(primeiraFase - agora) # Diferença entre os dias colocados anteriormente
     primeiraFaseDias = primeiraFaseDiasHoras[0:3] #para tirar o horario e me dar somente os dias
