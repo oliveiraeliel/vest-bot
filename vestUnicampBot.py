@@ -38,7 +38,7 @@ while True:#rotina para o codigo atualizar a cada 15 segundos
         #api.update_status("Faltam " + enemDias + " dias para o enem, " + primeiraFaseDias + " dias para a primeira fase e " + segundaFaseDias + "  dias para a segunda fase do Vestibular da Unicamp") #Tweeta
         print("Faltam " + enemDias + " dias para o enem, "+ primeiraFaseDias + " dias para a primeira fase e " + segundaFaseDias + "  dias para a segunda fase do Vestibular da Unicamp")
         print("Deu certo")
-        while horario == "14:03":
+        while horario == "15:03":
             print("Já tweetou")
             time.sleep(15)
     else:
