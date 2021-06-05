@@ -42,4 +42,4 @@ while True:#rotina para o codigo atualizar a cada 15 segundos
         print("Não deu a hora ainda...")
     print("Bot running...")
     print("Faltam " + enemDias + " dias para o enem, " + primeiraFaseDias + " dias para a primeira fase e " + segundaFaseDias + "  dias para a segunda fase do Vestibular da Unicamp")
-    time.sleep(15)#define o intervalo entre cada ciclo
+    time.sleep(15)#define o intervalo entre cada  ciclo
