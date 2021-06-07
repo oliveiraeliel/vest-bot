@@ -33,16 +33,22 @@ while True:#rotina para o codigo atualizar a cada 15 segundos
     horaAgora = datetime.now()#pega o horario atual
     horario = horaAgora.strftime('%H:%M')
     print(horario+" "+primeiraFaseDias+" "+segundaFaseDias + " " + enemDias)
-    # verifica se o horario atual é 11:00. Como o fuso horario do servidor é 3h adiantado, coloquei 14:00 pro bot twittar ao meio dia
 
+    #define a mensagem do tweet
+    msg = """
+    Enem: {} dias
+    Unicamp 1° fase: {} dias
+    Unicamp 2° fase: {} dias
+    """.format(enemDias, primeiraFaseDias, segundaFaseDias)
+    # verifica se o horario atual é 11:00. Como o fuso horario do servidor é 3h adiantado, coloquei 14:00 pro bot twittar ao meio dia
     if(horario == "14:00"):
         try:#não deixa a aplicação morrer quando acontecer erros no servidor
-            api.update_status("Faltam " + enemDias + " dias para o enem, " + primeiraFaseDias + " dias para a primeira fase e " + segundaFaseDias + "  dias para a segunda fase do Vestibular da Unicamp") #Tweeta
+            api.update_status(msg) #Tweeta
             print("Deu certo")
         except:
             print("Esse tweet ja existe :c")
     else:
         print("Não deu a hora ainda...")
     print("Bot running...")
-    print("Faltam " + enemDias + " dias para o enem, " + primeiraFaseDias + " dias para a primeira fase e " + segundaFaseDias + "  dias para a segunda fase do Vestibular da Unicamp")
+    print(msg)
     time.sleep(15)#define o intervalo entre cada  ciclo
