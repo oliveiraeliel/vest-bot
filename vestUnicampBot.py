@@ -36,7 +36,7 @@ while True:#rotina para o codigo atualizar a cada 15 segundos
 
     #define a mensagem do tweet
     msg = """
-    Enem: {} dias
+Enem: {} dias
 Unicamp 1° fase: {} dias
 Unicamp 2° fase: {} dias
     """.format(enemDias, primeiraFaseDias, segundaFaseDias)
