@@ -37,8 +37,8 @@ while True:#rotina para o codigo atualizar a cada 15 segundos
     #define a mensagem do tweet
     msg = """
     Enem: {} dias
-    Unicamp 1° fase: {} dias
-    Unicamp 2° fase: {} dias
+Unicamp 1° fase: {} dias
+Unicamp 2° fase: {} dias
     """.format(enemDias, primeiraFaseDias, segundaFaseDias)
     # verifica se o horario atual é 11:00. Como o fuso horario do servidor é 3h adiantado, coloquei 14:00 pro bot twittar ao meio dia
     if(horario == "14:00"):
