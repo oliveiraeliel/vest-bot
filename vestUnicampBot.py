@@ -52,7 +52,7 @@ Fuvest 1° fase: {} dias
 Fuvest 2° fase: {} dias
     """.format(enemDias, primeiraFaseDias, segundaFaseDias, primeiraFaseFuvestDias, segundaFaseFuvestDias)
     # verifica se o horario atual é 11:00. Como o fuso horario do servidor é 3h adiantado, coloquei 14:00 pro bot twittar ao meio dia
-    if horario == "14:32":
+    if horario == "14:00":
         try:#não deixa a aplicação morrer quando acontecer erros no servidor
             api.update_status(msg) #Tweeta
             print("Deu certo")
