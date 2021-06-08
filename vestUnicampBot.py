@@ -41,7 +41,7 @@ Unicamp 1° fase: {} dias
 Unicamp 2° fase: {} dias
     """.format(enemDias, primeiraFaseDias, segundaFaseDias)
     # verifica se o horario atual é 11:00. Como o fuso horario do servidor é 3h adiantado, coloquei 14:00 pro bot twittar ao meio dia
-    if(horario == "14:00"):
+    if(horario == "14:07"):
         try:#não deixa a aplicação morrer quando acontecer erros no servidor
             api.update_status(msg) #Tweeta
             print("Deu certo")
