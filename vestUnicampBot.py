@@ -2,10 +2,10 @@ import tweepy
 from datetime import date
 
 #tokens de acesso à conta do twitter
-API_KEY = "gBStTkiDRePDbCumC5dcUB8qF"
-API_SECRET_KEY = 'v707kD1kiRt7pTrIXVrvG0EWX20s5iv3AHR1TZuyM9dD1sp3PR'
-ACCESS_TOKEN = '1397176020407554053-hURajbyYStpJ1CcPf3Mzd5QHfCDhib'
-ACCESS_SECRET_TOKEN = 'wuSqj623BryUS0Pr18j9ur3qyVdbnT6UGQt3sPenBrOCY'
+API_KEY = ""
+API_SECRET_KEY = ''
+ACCESS_TOKEN = ''
+ACCESS_SECRET_TOKEN = ''
 
 auth = tweepy.OAuthHandler(API_KEY, API_SECRET_KEY)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET_TOKEN)
