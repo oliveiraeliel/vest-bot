@@ -1,65 +1,48 @@
 import tweepy
-from datetime import datetime, date
-import os
-from os import environ
-import time
+from datetime import date
 
-while True:#rotina para o codigo atualizar a cada 15 segundos
-    #tokens de acesso à conta do twitter
-    API_KEY = environ['API_KEY']
-    API_SECRET_KEY = environ['API_SECRET_KEY']
-    ACCESS_TOKEN = environ['ACCESS_TOKEN']
-    ACCESS_SECRET_TOKEN = environ['ACCESS_SECRET_TOKEN']
+#tokens de acesso à conta do twitter
+API_KEY = "gBStTkiDRePDbCumC5dcUB8qF"
+API_SECRET_KEY = 'v707kD1kiRt7pTrIXVrvG0EWX20s5iv3AHR1TZuyM9dD1sp3PR'
+ACCESS_TOKEN = '1397176020407554053-hURajbyYStpJ1CcPf3Mzd5QHfCDhib'
+ACCESS_SECRET_TOKEN = 'wuSqj623BryUS0Pr18j9ur3qyVdbnT6UGQt3sPenBrOCY'
 
-    auth = tweepy.OAuthHandler(API_KEY, API_SECRET_KEY)
-    auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET_TOKEN)
-    api = tweepy.API(auth)
+auth = tweepy.OAuthHandler(API_KEY, API_SECRET_KEY)
+auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET_TOKEN)
+api = tweepy.API(auth)
 
-    enem = date(2021, 11, 21) #Dia da primeira fase
-    agora = date.today() #Dia de hoje
+enem = date(2021, 11, 21) #Dia da primeira fase
+agora = date.today() #Dia de hoje
 
-    enemDiasHoras = str(enem - agora) # Diferença entre os dias colocados anteriormente
-    enemDias = enemDiasHoras[0:3] #para tirar o horario e me dar somente os dias
+enemDiasHoras = str(enem - agora) # Diferença entre os dias colocados anteriormente
+enemDias = enemDiasHoras[0:3] #para tirar o horario e me dar somente os dias
 
-    #unicamp*********************
-    primeiraFase = date(2021, 11, 7) #Dia da primeira fase unicamp
-    primeiraFaseDiasHoras = str(primeiraFase - agora) # Diferença entre os dias colocados anteriormente
-    primeiraFaseDias = primeiraFaseDiasHoras[0:3] #para tirar o horario e me dar somente os dias
+#unicamp*********************
+primeiraFase = date(2021, 11, 7) #Dia da primeira fase unicamp
+primeiraFaseDiasHoras = str(primeiraFase - agora) # Diferença entre os dias colocados anteriormente
+primeiraFaseDias = primeiraFaseDiasHoras[0:3] #para tirar o horario e me dar somente os dias
 
-    segundaFase = date(2022, 1, 9) #Dia da segunda fase unicamp
-    segundaFaseDiasHoras = str(segundaFase - agora) # Diferença entre os dias colocados anteriormente
-    segundaFaseDias = segundaFaseDiasHoras[0:3] #para tirar o horario e me dar somente os dias
+segundaFase = date(2022, 1, 9) #Dia da segunda fase unicamp
+segundaFaseDiasHoras = str(segundaFase - agora) # Diferença entre os dias colocados anteriormente
+segundaFaseDias = segundaFaseDiasHoras[0:3] #para tirar o horario e me dar somente os dias
 
-    #fuvest**********************
-    primeiraFaseFuvest = date(2021, 12, 12)
-    primeiraFaseFuvestDiasHoras = str(primeiraFaseFuvest - agora)
-    primeiraFaseFuvestDias = primeiraFaseFuvestDiasHoras[0:3]
+#fuvest**********************
+primeiraFaseFuvest = date(2021, 12, 12)
+primeiraFaseFuvestDiasHoras = str(primeiraFaseFuvest - agora)
+primeiraFaseFuvestDias = primeiraFaseFuvestDiasHoras[0:3]
 
-    segundaFaseFuvest = date(2022, 1, 16)
-    segundaFaseFuvestDiasHoras = str(segundaFaseFuvest - agora)
-    segundaFaseFuvestDias = segundaFaseFuvestDiasHoras[0:3]
-
-    horaAgora = datetime.now()#pega o horario atual
-    horario = horaAgora.strftime('%H:%M')
-    print(horario+" "+primeiraFaseDias+" "+segundaFaseDias + " " + enemDias)
-
-    #define a mensagem do tweet
-    msg = """
+segundaFaseFuvest = date(2022, 1, 16)
+segundaFaseFuvestDiasHoras = str(segundaFaseFuvest - agora)
+segundaFaseFuvestDias = segundaFaseFuvestDiasHoras[0:3]
+msg = """
 Enem: {} dias
 Unicamp 1° fase: {} dias
 Unicamp 2° fase: {} dias
 Fuvest 1° fase: {} dias
 Fuvest 2° fase: {} dias
     """.format(enemDias, primeiraFaseDias, segundaFaseDias, primeiraFaseFuvestDias, segundaFaseFuvestDias)
-    # verifica se o horario atual é 11:00. Como o fuso horario do servidor é 3h adiantado, coloquei 14:00 pro bot twittar ao meio dia
-    if horario == "14:00":
-        try:#não deixa a aplicação morrer quando acontecer erros no servidor
-            api.update_status(msg) #Tweeta
-            print("Deu certo")
-        except:
-            print("Esse tweet ja existe :c")
-    else:
-        print("Não deu a hora ainda...")
-    print("Bot running...")
-    print(msg)
-    time.sleep(15)#define o intervalo entre cada  ciclo
+try:
+    api.update_status(msg) #Tweeta
+    print("deu certo")
+except:
+    print("Erro :c")
