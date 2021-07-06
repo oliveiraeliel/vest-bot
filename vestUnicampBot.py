@@ -17,7 +17,7 @@ agora = date.today() #Dia de hoje
 enemDiasHoras = str(enem - agora) # Diferença entre os dias colocados anteriormente
 enemDias = enemDiasHoras[0:3] #para tirar o horario e me dar somente os dias
 
-#unicamp*********************
+#unicamp********************
 primeiraFase = date(2021, 11, 7) #Dia da primeira fase unicamp
 primeiraFaseDiasHoras = str(primeiraFase - agora) # Diferença entre os dias colocados anteriormente
 primeiraFaseDias = primeiraFaseDiasHoras[0:3] #para tirar o horario e me dar somente os dias
