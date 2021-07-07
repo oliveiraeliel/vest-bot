@@ -11,6 +11,7 @@ auth = tweepy.OAuthHandler(API_KEY, API_SECRET_KEY)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET_TOKEN)
 api = tweepy.API(auth)
 
+#enem***********************
 enem = date(2021, 11, 21) #Dia da primeira fase
 agora = date.today() #Dia de hoje
 
