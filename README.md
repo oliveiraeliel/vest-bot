@@ -13,6 +13,6 @@ User do bot no twitter: <a href="twitter/vestDiasBot">@vestDiasBot</a>
 
 <i>Sinta-se livre para utilizar este código como quiser</i>
 
-<i>Inspirado no <a href="https://twitter.com/SpFerias">@SpFerias</a>, <a href="https://github.com/ArthurSMg/FeriasBot_USP">github</a></i>
+<i>Inspirado no <a href="https://twitter.com/SpFerias">@SpFerias</a>, https://github.com/ArthurSMg/FeriasBot_USP
 
 
