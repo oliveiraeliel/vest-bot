@@ -8,8 +8,8 @@ User do bot no twitter: <a href="twitter/vestDiasBot">@vestDiasBot</a>
 
 ### Tecnologias usadas nesse projeto:
 ![Python](https://img.shields.io/badge/Python-4C53AD?style=for-the-badge&logo=python&logoColor=yellow)
-![Tweepy](https://img.shields.io/badge/tweepy-4C53AD?style=for-the-badge&logo=tweepy&logoColor=yellow)
-![Datetime](https://img.shields.io/badge/datetime-4C53AD?style=for-the-badge&logo=datetime&logoColor=yellow)
+![Tweepy](https://img.shields.io/badge/tweepy-809B7B?style=for-the-badge&logo=tweepy&logoColor=yellow)
+![Datetime](https://img.shields.io/badge/datetime-DA532F?style=for-the-badge&logo=datetime&logoColor=yellow)
 
 <i>Sinta-se livre para utilizar este código como quiser</i>
 
