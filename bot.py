@@ -33,11 +33,11 @@ FUVEST_PRIMEIRA_FASE = date(2021, 12, 12)
 FUVEST_SEGUNDA_FASE = date(2022, 1, 16)
 
 #passando os atributos para a função get_days
-enem = get_days(ENEM, agora, "Enem: ")
-unicamp_1 = get_days(UNICAMP_PRIMEIRA_FASE, agora, "Unicamp 1° fase: ")
-unicamp_2 = get_days(UNICAMP_SEGUNDA_FASE, agora, "Unicamp 2° fase: ")
-fuvest_1 = get_days(FUVEST_PRIMEIRA_FASE, agora, "Fuvest 1° fase: ")
-fuvest_2 = get_days(FUVEST_SEGUNDA_FASE, agora, "Fuvest 2° fase: ")
+enem = get_days(ENEM, agora, "Enem: ") #get_days(data, hoje, vest)
+unicamp_1 = get_days(UNICAMP_PRIMEIRA_FASE, agora, "Unicamp 1° fase: ") #get_days(data, hoje, vest)
+unicamp_2 = get_days(UNICAMP_SEGUNDA_FASE, agora, "Unicamp 2° fase: ") #get_days(data, hoje, vest)
+fuvest_1 = get_days(FUVEST_PRIMEIRA_FASE, agora, "Fuvest 1° fase: ") #get_days(data, hoje, vest)
+fuvest_2 = get_days(FUVEST_SEGUNDA_FASE, agora, "Fuvest 2° fase: ") #get_days(data, hoje, vest)
 
 #mensagem que vai ser mostrada no twitter
 msg = """{}
