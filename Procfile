@@ -1,1 +1,1 @@
-worker: python vestUnicampBot.py
+worker: python bot.py
