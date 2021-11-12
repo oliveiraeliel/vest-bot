@@ -15,4 +15,6 @@ User do bot no twitter: <a href="twitter/vestDiasBot">@vestDiasBot</a>
 
 <i>Inspirado no <a href="https://twitter.com/SpFerias">@SpFerias</a>, https://github.com/ArthurSMg/FeriasBot_USP
 
+  
+ ![Visitors](https://api.visitorbadge.io/api/VisitorHit?user=oliveiraeliel&vest-bot&countColor=%237B1E7A)
 
