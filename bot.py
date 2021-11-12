@@ -11,8 +11,10 @@ auth = tweepy.OAuthHandler(API_KEY, API_SECRET_KEY)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET_TOKEN)
 api = tweepy.API(auth)
 
-def get_days(data, hoje, vest): #função que retorna os dias até os respectivos vestibulares
-    diferenca = data - hoje
+agora = date.today() #Dia de hoje
+
+def get_days(data, vest): #função que retorna os dias até os respectivos vestibulares
+    diferenca = data - agora
     dias = diferenca.days
     if(dias == 0): #filtragem dos possiveis valores
         return "{} Hoje!!!".format(vest)
@@ -23,21 +25,14 @@ def get_days(data, hoje, vest): #função que retorna os dias até os respectivo
     else:
         return "{}{} dias".format(vest, dias)
 
-agora = date.today() #Dia de hoje
-
-#constantes com as datas dos vestibulares
-ENEM = date(2021, 11, 21)
-UNICAMP_PRIMEIRA_FASE = date(2021, 11, 7)
-UNICAMP_SEGUNDA_FASE = date(2022, 1, 9)
-FUVEST_PRIMEIRA_FASE = date(2021, 12, 12)
-FUVEST_SEGUNDA_FASE = date(2022, 1, 16)
-
-#passando os atributos para a função get_days
-enem = get_days(ENEM, agora, "Enem: ") #get_days(data, hoje, vest)
-unicamp_1 = get_days(UNICAMP_PRIMEIRA_FASE, agora, "Unicamp 1° fase: ") #get_days(data, hoje, vest)
-unicamp_2 = get_days(UNICAMP_SEGUNDA_FASE, agora, "Unicamp 2° fase: ") #get_days(data, hoje, vest)
-fuvest_1 = get_days(FUVEST_PRIMEIRA_FASE, agora, "Fuvest 1° fase: ") #get_days(data, hoje, vest)
-fuvest_2 = get_days(FUVEST_SEGUNDA_FASE, agora, "Fuvest 2° fase: ") #get_days(data, hoje, vest)
+#get_days((data do vestibular), (mensagem do vestibular))
+enem = get_days(date(2021, 11, 21), "Enem: ")
+unicamp_1 = get_days(date(2021, 11, 7), "Unicamp 1° fase: ")
+unicamp_2 = get_days(date(2022, 1, 9), "Unicamp 2° fase: ")
+fuvest_1 = get_days(date(2021, 12, 12), "Fuvest 1° fase: ")
+fuvest_2 = get_days(date(2022, 1, 16), "Fuvest 2° fase: ")
+unesp_1 = get_days(date(2021, 11, 14), "Unesp 1° fase: ")
+unesp_2 = get_days(date(2021, 12, 19), "Unesp 2° fase: ")
 
 #mensagem que vai ser mostrada no twitter
 msg = """{}
@@ -45,9 +40,12 @@ msg = """{}
 {}
 {}
 {}
-""".format(enem, unicamp_1, unicamp_2, fuvest_1, fuvest_2) #valores que vão entrar nas {}
+{}
+{}
+""".format(enem, unicamp_1, unicamp_2, fuvest_1, fuvest_2, unesp_1, unesp_2) #valores que vão entrar nas {}
 try:
-    api.update_status(msg)
+    #api.update_status(msg)
+    print(msg)
     print("deu certo")
 except:
     print("error :c")
