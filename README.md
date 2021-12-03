@@ -2,7 +2,7 @@
 
 Olá, este é um Twitter bot, programado em Python utilizando a biblioteca Tweepy e hospedado no <a href="https://www.pythonanywhere.com">pythonanywhere</a><br>
 O objetivo é mostrar uma contagem de dias para os vestibulares todos os dias no Twitter às 11:00<br>
-User do bot no twitter: <a href="twitter/vestDiasBot">@vestDiasBot</a>
+User do bot no twitter: <a href="https://twitter.com/diasvestbot">@vestdiasbot</a>
 
 
 
